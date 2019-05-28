@@ -15,8 +15,8 @@
 # Add the original repository and a remote.
 git remote add template https://timelink-sources.visualstudio.com/timelink-sources-template/_git/timelink-sources-template
 
-# Pull new stuff into current branch
-git pull template/master
+# Pull new stuff into master branch
+git pull template master
 
 # remove the remote to prevent pushing by accident.
 git remote rm template
