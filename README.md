@@ -8,6 +8,20 @@ This repository should be forked to a new repository with the name of the new co
 
 On Azure DevOps:
 
+1. Create a new project with the name of the community, for instance: Soure
+
+2. Go to the project timelink-sources-template and select Repos on the left
+
+3. On top right click on fork.
+
+4. Rename the new Repo <COMMUNITY>-sources, e.g., soure-sources and select the community project created in 1 as the destination. Copy all branches.
+
+5. Go to the project created in 1. and select Repos. You should see the repository created in 5.
+
+6. On top right click on Clone.
+
+7. Either use the command given or clone with VSCode.
+
 
 On GitHub:
 
