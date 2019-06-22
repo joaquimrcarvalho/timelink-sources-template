@@ -44,9 +44,11 @@ A gestão do ramo `master` cabe ao responsável do projecto.
 
 Como ficou acima, a base de dados de referência de um projeto está associada ao ramo `master` do repositório de projeto.
 
-Também é possível fazer uma variante da versão de referência, acrescentando mais fontes, alterando formatos de transcrição e regras de inferência e identificando pessoas e entidades de forma diferente. Nesse caso cria-se um novo ramos a partir do principal, ou faz-se uma bifurcação. e altera-se como for necessário.
+Também é possível fazer uma variante da versão de referência, acrescentando mais fontes, alterando formatos de transcrição e regras de inferência e identificando pessoas e entidades de forma diferente. 
 
-> Mesmo se a intenção não é fazer uma variante da base de dados com informação diferente do `master`, mas apenas ter uma cópia local ou adicional, é importante que em cada instalação com uma base de dados operacional, exista um ramo do repositório associado. Esse ramo pode ser periodicamente ressincronizado com o ramo `master`de referência.
+Nesse caso cria-se um novo ramo a partir do principal, ou faz-se uma bifurcação. e altera-se como for necessário.
+
+> Mesmo se a intenção não é fazer uma variante da base de dados com informação diferente do `master`, mas apenas ter uma cópia local ou adicional, é importante que em cada instalação com uma base de dados operacional, exista um ramo do repositório associado. Esse ramo pode ser periodicamente ressincronizado com o ramo `master` de referência.
 
 ## Transcritores trabalham sobre repositórios isolados
 
@@ -72,7 +74,7 @@ Essas representações informáticas são as seguintes:
 
 * um conjunto de _transcrições_ de fontes históricas numa linguagem formal chamada `kleio`.
 * um conjunto de _traduções_, que são ficheiros produzidos a partir das transcrições e que preparam a informação para importação numa base de dados.
-* um conjunto de _identificações_ que são decisões tomadas pelo investigador sobre a co-ocorrência de pessoas, bens e outro tipo de entidades. Ao decidir que diferentes referências em diferentes fontes dizem respeito a uma mesma _entidade_,  o investigador permite a geração de representações derivadas como biografias, redes, etc... que suportam análises complexas da comunidade.
+* um conjunto de _identificações_ (pode haver outras coisas derivadas, como grupos ou redes, orecisamos de um termo mais genérico, como _análises_, ou _interpretações_) que são decisões tomadas pelo investigador sobre a co-ocorrência de pessoas, bens e outro tipo de entidades. Ao decidir que diferentes referências em diferentes fontes dizem respeito a uma mesma _entidade_,  o investigador permite a geração de representações derivadas como biografias, redes, etc... que suportam análises complexas da comunidade.
 
 ## O processo e os seus produtos
 
@@ -83,14 +85,16 @@ Estas representações informáticas resultam de um _processo_ que vai desde a a
     * Em geral os formatos de registo pré-definidos não permitem uma grande variabilidade de resultados. Diferentes _transcritores_ perante a mesma fonte produzem textos idênticos, se não fizerem erros de leitura.
     * O resultado da transcrição são ficheiros com a extensão `cli`. O conjunto dos ficheiros `cli` de um projecto constituti a _base factual_ (as fontes primárias) de um do estudo de uma comunidade.
 
-2. O _tradutor_ desencadeia o processo de tradução das fontes transcritas. 
+2. O _tradutor_ gere o processo de tradução das fontes transcritas. 
 
     * Esta fase é feita por um programa informático que incorpora uma série de decisões prévias sobre a forma de representar a fonte (a sua _estrutura_ ou _formato_) e também um conjunto de _regras de inferência_ de informação implícita na fonte. 
     * As regras de inferência permitem aliviar o trabalho de transcrição ao inferirem atirbutos como o _género_, _estado civil_, assim como _relações de parentesco_ e outras, a partir das funções com que pessoas e outras entidades ocorrem nos actos.
     * Cabe ao _tradutor_ aferir se o formato usado para a transcrição da fonte encapsula o máximo de informação relevante sem custo exagerado de transcrição.
-    * Cabe também ao _tradutor_ determinar as regras de inferência aplicáveis a cada tipo de fonte, seguindo o princípio minimalista de não inferir o que pode ser ambíguo ou sujeito a discussão. As regras de inferência visam sobretudo evitar transcrição de informação redudante pelos _transcritores_ 
-    * Por exemplo, num batismo não vale a pena registar o sexo da mãe e do pai, nem a relação de parentesco entre pais e criança batizada - tudo isso pode ser inferido automaticamente).
+    * Cabe também ao _tradutor_ determinar as regras de inferência aplicáveis a cada tipo de fonte, seguindo o princípio minimalista de não inferir o que pode ser ambíguo ou sujeito a discussão. As regras de inferência visam sobretudo evitar transcrição de informação redudante pelos _transcritores_.
+   		 * Por exemplo, num batismo não vale a pena registar o sexo da mãe e do pai, nem a relação de parentesco entre pais e criança batizada - tudo isso pode ser inferido automaticamente).
     * Finalmente o processo de tradução gera identificadores únicos para cada entidade (pessoa, bem, etc.) referida na fonte, identificadores esses que são necessários para a posterior identificação das ocorrências das mesmas entidades nas fontes.
+    	* A geração de identificadores é um processo automático mas o _tradutor_ pode definir alguns parâmetros que regulam o processo: quais os elementos da fonte que terão ids gerados automaticamente e quais os que requerem a atribuição de um id pelo _transcritor_ e ainda
+    		se os ids num dados ficheiro devem ser prefixados automaticamente com uma sequência de caracteres.
     * O resultado do processo de tradução são diferentes ficheiros, com o mesmo nome que o ficheiro com a transcrião da fonte e com diferentes extensões:
         * `xml`contêm os dados retirados do ficheiro `cli` num formato adequado para importação na base de dados.
         * `rpt` contêm relatórios de tradução para deteção de erros ou situações que necessitam cuidado(_warnings_).
@@ -99,16 +103,16 @@ Estas representações informáticas resultam de um _processo_ que vai desde a a
     * Adicionalmente, o resultado de uma tradução é determinado por dois tipos de ficheiros  que controlam o comportamento do tradutor e que tipicamente são os mesmos em todas as transcrições de um projeto.
         * O ficheiro de extensão `str` (normalmente `gacto2.str`) que define o formato de transcrição da fonte (que tipo de actos, qual a informação associada a cada um e que tipo de actores participam, com que funções).
         * O ficheiro `inferences.pl`com as regras de inferência da informação implícita na transcrição.
-    * Assim, o resultado final da tradução das fontes é dado pelo conjunto dos ficheiros `.cli`, `.rpt`, `.err`, `.xml` e pelos ficheiros `gacto2.str`e `inferences.pl`.
+    * Assim, o resultado final da tradução das fontes é dado pelo conjunto dos ficheiros `.cli`, `.rpt`, `.err`, `.xml` e pelos ficheiros `gacto2.str` e `inferences.pl`.
 
 3. O `importador` incorpora o resultado da tradução numa base de dados que vai permitir a identificação das pessoas. 
     * A base de dados permite navegar de forma eficaz os dados contidos nos ficheiros `xml` gerados pelo _tradutor_. 
     * É importante entender que no `Timelink`a informação importada é imutável. Não existe modo através do interface da base de dados de alterar os dados importados. 
     * Quando um erro é detectado na base de dados a correção tem de ser feita na transcrição original, que é re-traduzida e reimportada. Este princípio garante a transparência da informação usada no projeto e a sua acessibilidade na forma de transcrição de fonte.
     * Assim a fase de importação não adiciona informação à fase anterior. Apenas a transforma num formato mais acessível.
-    * Esta fase pode ser representada por uma exportação em linguagem `sql` do conteúdo da base de dados e pelos ficheiros `.xpt`com o relatório de importação e `.xerr`com o número de erros detectados no processo de importação.
+    * Esta fase pode ser representada por uma exportação em linguagem `sql` do conteúdo da base de dados e pelos ficheiros `.xpt` com o relatório de importação e `.xerr`com o número de erros detectados no processo de importação.
 
-4. O `identificador` toma decisões sobre quem é quem na informação recolhida. 
+4. O `identificador` (ou o _investigador_, porque pode gerar também redes e grupos) toma decisões sobre quem é quem na informação recolhida e pode gerar entidades derivadas como redes e grupos. 
     * Na sua essência o processo de identificação regista decisões do tipo:  a pessoa X que ocorre no acto A é a mesma que a pessoa Y que ocorre no acto B. 
     * Essas decisões são registadas em tabelas específicas na base de dados e podem ser exportadas no formato `json` que facilita a troca com outras aplicações.
     * Como as identificações são feitas na base de dados elas também são incluídas em ficheiro de exportação da base de dados em formato `sql`.
