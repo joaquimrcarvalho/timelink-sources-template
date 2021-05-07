@@ -47,7 +47,7 @@ Quando se inicia um novo projecto, ou se migra um projeto existente para este fo
 
 ## Em cada repositório o ramo `master` corresponde à versão de referência.
 
-Os repositórios `Git` podem conter vários _ramos_ que correspondem a versões criadas ou alteradas por diferentes intervenients no projeto.
+Os repositórios `Git` podem conter vários _ramos_ que correspondem a versões criadas ou alteradas por diferentes intervenientes no projeto.
 
 O ramo `master` preserva a _versão de referência_ de todos os ficheiros produzidos pelas várias fases do processo. O ramo `master` alimenta uma base de dados de referência para a comunidade, e pode alimentar outras cópias que sejam criadas para comodidade e redundância.
 
@@ -64,10 +64,6 @@ Também é possível fazer uma variante da versão de referência, acrescentando
 
 Nesse caso cria-se um novo ramo a partir do principal, ou faz-se uma bifurcação. e altera-se como for necessário.
 
-
-## Transcritores trabalham sobre repositórios isolados
-
-...... TBD-----
 
 # Conceitos base e enquadramento geral
 
@@ -104,12 +100,12 @@ Estas representações informáticas resultam de um _processo_ que vai desde a a
     * Esta fase é feita por um programa informático que incorpora uma série de decisões prévias sobre a forma de representar a fonte (a sua _estrutura_ ou _formato_) e também um conjunto de _regras de inferência_ de informação implícita na fonte. 
     * As regras de inferência permitem aliviar o trabalho de transcrição ao inferirem atributos como o _género_, _estado civil_, assim como _relações de parentesco_ e outras, a partir das funções com que pessoas e outras entidades ocorrem nos actos.
     * Cabe ao _tradutor_ aferir se o formato usado para a transcrição da fonte encapsula o máximo de informação relevante sem custo exagerado de transcrição.
-    * Cabe também ao _tradutor_ determinar as regras de inferência aplicáveis a cada tipo de fonte, seguindo o princípio minimalista de não inferir o que pode ser ambíguo ou sujeito a discussão. As regras de inferência visam sobretudo evitar transcrição de informação redudante pelos _transcritores_.
+    * Cabe também ao _tradutor_ determinar as regras de inferência aplicáveis a cada tipo de fonte, seguindo o princípio minimalista de não inferir o que pode ser ambíguo ou sujeito a discussão. As regras de inferência visam sobretudo evitar transcrição de informação redundante pelos _transcritores_.
    		 * Por exemplo, num batismo não vale a pena registar o sexo da mãe e do pai, nem a relação de parentesco entre pais e criança batizada - tudo isso pode ser inferido automaticamente.
     * Finalmente o processo de tradução gera identificadores únicos para cada entidade (pessoa, bem, etc.) referida na fonte, identificadores esses que são necessários para a posterior identificação das ocorrências das mesmas entidades nas fontes.
     	* A geração de identificadores é um processo automático mas o _tradutor_ pode definir alguns parâmetros que regulam o processo: quais os elementos da fonte que terão identificadores gerados automaticamente e quais os que requerem a atribuição de um identificadores pelo _transcritor_ e ainda
     		se os ids num dados ficheiro devem ser prefixados automaticamente com uma sequência de caracteres.
-    * O resultado do processo de tradução são diferentes ficheiros, com o mesmo nome que o ficheiro com a transcrião da fonte e com diferentes extensões:
+    * O resultado do processo de tradução são diferentes ficheiros, com o mesmo nome que o ficheiro com a transcrição da fonte e com diferentes extensões:
         * `xml`contêm os dados retirados do ficheiro `cli` num formato adequado para importação na base de dados.
         * `rpt` contêm relatórios de tradução para deteção de erros ou situações que necessitam cuidado(_warnings_).
         * `err` contém o número de erros e avisos gerados pela tradução
