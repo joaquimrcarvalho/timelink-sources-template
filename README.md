@@ -5,28 +5,18 @@ This directory contains source files in kleio notation collected in the scope of
 ## Usage
 
 This repository should be forked to a new repository with the name of the new community project. 
+### Create a new repository on GitHub based on a template
 
-On Azure DevOps:
+This is the recommended procedure. It will create a repository with the recommended structure, including documentation.
 
-1. Create a new project with the name of the community, for instance: Soure
+You need an account with [GitHub](https://github.com).
 
-2. Go to the project timelink-sources-template and select Repos on the left
+1. Go to the [timelink-sources-template](https://github.com/joaquimrcarvalho/timelink-sources-template) repository on GitHub.
+2. Press the green button "Use this template".
+3. Choose a new name for your sources' repository
 
-3. On top right click on fork.
+Full instructions at: [https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template]
 
-4. Rename the new Repo <COMMUNITY>-sources, e.g., soure-sources and select the community project created in 1 as the destination. Copy all branches.
-
-5. Go to the project created in 1. and select Repos. You should see the repository created in 5.
-
-6. On top right click on Clone.
-
-7. Either use the command given or clone with VSCode.
-
-
-On GitHub:
-
-
-Then, clone on work computer with:
 
 
 
@@ -44,9 +34,10 @@ Timelink is open source MIT License software available at http://github.com/joaq
 
 ## Source collections included in this repository
 
-* <NAME OF COMMUNITY RELATED TO THIS REPOSITORY>
+* This repository contains prosopographical information about the students, professors and other staff of the University of Coimbra, from 1537 (when the university was relocated to Coimbra by King John III, until 1911, when other universities were created in Lisboa and Oporto, ending the multi-secular monopoly of Coimbra on higher education in the Portuguese Speaking world).
+* The main dataset comes from the student records at the Arquivo da Universidade de Coimbra. 
+  
 
-    <BRIEF DESCRIPTION: TYPES OF HISTORICAL SOURCES, CRONOLOGY, PURPOSE.
 
 ## License
 
@@ -56,7 +47,7 @@ Kleio transcriptions of historical sources are not distributed under the same li
 
 Each Kleio transcription file is copyright of the person or persons that produced the transcription.
 
-(c) Universidade de Coimbra, <OTHER PEOPLE OR INSTITUTIONS>.
+(c) Universidade de Coimbra, Joaquim Carvalho (for the kleio notation of the sources).
 
 _Files in this repository are covered by the Creative Commons 
 Attribution-NonCommmercial-ShareAlike 4.0 International_
