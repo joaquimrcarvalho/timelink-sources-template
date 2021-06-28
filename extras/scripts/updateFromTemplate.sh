@@ -15,6 +15,6 @@
 # Add the original repository and a remote.
 git remote add template https://github.com/joaquimrcarvalho/timelink-sources-template.git
 # Pull new stuff into master branch
-git pull template master
+git pull template master --allow-unrelated-histories
 # remove the remote to prevent pushing by accident.
 git remote rm template
