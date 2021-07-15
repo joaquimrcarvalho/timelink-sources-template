@@ -4,7 +4,7 @@ This folder contains Jupyter notebooks that interact with the MHK/Timelink datab
 
 To be able to run notebooks you need to install the Python VSCode extension and a Python interpreter on the current machine.
 
-## Install the Python instruction and the Python interpreter
+## Install the Python extension and the Python interpreter
 
 To install the Python extension at https://marketplace.visualstudio.com/items?itemName=ms-python.python
 
