@@ -1,0 +1,4 @@
+ipython-sql
+mysql-connector-python
+python-dotenv
+ipywidgets
