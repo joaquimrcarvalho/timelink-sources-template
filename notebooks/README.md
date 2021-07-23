@@ -6,35 +6,27 @@ To be able to run notebooks you need to install the Python VSCode extension and 
 
 ## Install the Python extension and the Python interpreter
 
-To install the Python extension at https://marketplace.visualstudio.com/items?itemName=ms-python.python
+To install the Python extension check https://marketplace.visualstudio.com/items?itemName=ms-python.python
 
-## Install the SQL extension for notebooks
+## Install aditional packages for timelink-mhk interaction
 
-Open the terminal in VSCode: Command+j or menu `Terminal` -> `New terminal`
+In addition to the base instalation of Python, some specific packages are needed
+to interact with ``timelink-mhk``. The packages handle sql queries, reading MHK
+configuration files, and various auxiliary functions.
+
+To install the required packages open the terminal in VSCode: Command+j or menu `Terminal` -> `New terminal`
 
 Type 
-
-     ``pip install ipython-sql `[return]` ``
-
-When finished install the Mysql connector
+    ``pip install -r notebooks/requirements.txt``
 
 
-    ``pip install mysql-connector-python`´
-
-
-## Install auxiliary packages
-
-Reading MHK configuration files 
-
-    ``pip install python-dotenv``
+# Optional packages
 
 Data analysis with Pandas
 
     ``pip install pandas``
 
-Widgets for interaction with user
 
-    ``pip install ipywidgets``
 ## References
 
 * https://pypi.org/project/ipython-sql/
