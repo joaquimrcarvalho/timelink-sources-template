@@ -34,10 +34,7 @@ Timelink is open source MIT License software available at http://github.com/joaq
 
 ## Source collections included in this repository
 
-* This repository contains prosopographical information about the students, professors and other staff of the University of Coimbra, from 1537 (when the university was relocated to Coimbra by King John III, until 1911, when other universities were created in Lisboa and Oporto, ending the multi-secular monopoly of Coimbra on higher education in the Portuguese Speaking world).
-* The main dataset comes from the student records at the Arquivo da Universidade de Coimbra. 
-  
-
+* **Describe this repository collections here ****
 
 ## License
 
