@@ -1,3 +1,4 @@
 .DS_Store
-.vscode/settings.json
 notebooks/__pycache__
+.venv
+notebooks/timelinknb/__pycache__/__init__.cpython-310.pyc
