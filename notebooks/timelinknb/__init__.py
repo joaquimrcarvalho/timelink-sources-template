@@ -32,7 +32,7 @@ mhk_databases = []
 
 
 def get_db(db_spec, **extra_args):
-    """ get a TimelinkDB instance of the FAUC db
+    """ get a TimelinkDB Database
     
     db_spec can be a connection string or a tuple.
     if a tuple:
@@ -103,7 +103,7 @@ def get_nattribute_table(db: TimelinkDB=None):
     """ Return the nattribute view.
 
     Returns a sqlalchemy table linked to the nattributes view of MHK databases
-    This views joins the talbe "persons" and the table "attributes" providing attribute
+    This views joins the table "persons" and the table "attributes" providing attribute
     values with person names and sex.
 
     The column id contains the id of the person/object, not of the attribute
