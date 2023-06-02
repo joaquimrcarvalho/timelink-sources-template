@@ -6,7 +6,7 @@ To be able to run notebooks you need to install the Python VSCode extension and 
 
 ## Install the Python extension and the Python interpreter
 
-To install the Python extension check https://marketplace.visualstudio.com/items?itemName=ms-python.python
+To install the Python extension check [https://marketplace.visualstudio.com/items?itemName=ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
 ## Install aditional packages for timelink-mhk interaction
 
