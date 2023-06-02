@@ -1,10 +1,16 @@
-# Timelink source file repository
+# Timelink source file template
 
-This directory contains source files in kleio notation collected in the scope of the Timelink/MHK project.
+This directory contains the template for a Timelink source repository.
+it should be used to create a repository for a new Timelink project,
+or to integrate existing sources into a modern Timelink project.
+
+Project using this template benefit from the following features:
+1. A standard directory structure for the source files.
+2. Access to notebooks for data analysis and visualization.
+3. Local configuration of `stru` (source format) files and inference rules
+    specific for a project.
 
 ## Usage
-
-This repository should be forked to a new repository with the name of the new community project. 
 ### Create a new repository on GitHub based on a template
 
 This is the recommended procedure. It will create a repository with the recommended structure, including documentation.
@@ -12,8 +18,10 @@ This is the recommended procedure. It will create a repository with the recommen
 You need an account with [GitHub](https://github.com).
 
 1. Go to the [timelink-sources-template](https://github.com/joaquimrcarvalho/timelink-sources-template) repository on GitHub.
-2. Press the green button "Use this template".
-3. Choose a new name for your sources' repository
+2. Press the green button "Use this template" and select "Create new repository".
+3. Choose a new name for your sources' repository.
+4. Press the green button "Create repository from template".
+
 
 Full instructions at: [https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template]
 
