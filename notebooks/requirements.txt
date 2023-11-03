@@ -2,3 +2,5 @@ ipython-sql
 mysql-connector-python
 python-dotenv
 ipywidgets
+urllib3<2
+sqlalchemy-utils
