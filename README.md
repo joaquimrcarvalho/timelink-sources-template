@@ -38,7 +38,7 @@ Timelink is open source MIT License software available at http://github.com/joaq
 
 ## License
 
-Timelink link software is distributed under a MIT license that includes usage for commercial purposes. 
+Timelink software is distributed under a MIT license that includes usage for commercial purposes. 
 
 Kleio transcriptions of historical sources are not distributed under the same license. 
 
