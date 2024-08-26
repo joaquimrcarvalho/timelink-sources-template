@@ -1,36 +1,29 @@
-# Notebooks
+## How to use the notebooks in this folder
 
-This folder contains Jupyter notebooks that interact with the MHK/Timelink database to process data in forms not available using the web interface.
+This folder contains Jupyter notebooks that interact with `timelink`.
 
-To be able to run notebooks you need to install the Python VSCode extension and a Python interpreter on the current machine.
+In order to use the notebooks you need to install VSCode, the Python interpreter and support libraries.
 
-## Install the Python extension and the Python interpreter
+You also need to install Docker.
 
-To install the Python extension check https://marketplace.visualstudio.com/items?itemName=ms-python.python
+1. Install VSCode from https://code.visualstudio.com/download
+2. Install the Python VSCode extension from  https://marketplace.visualstudio.com/items?itemName=ms-python.python
+3. After restarting VS Code and set up your environment as instructed in step 2, install the support libraries:##
+   * cmp+shift+P Python create environment https://code.visualstudio.com/docs/python/environments
+   * choose Python interpreter from list
+   * accept suggestion to install notebooks/requirements.txt
+4. Install jupyter extension
+5. Open notebook 0-tutorial
+6. in the upper right corner select the environment you just created
+7. Install Docker. See https://docs.docker.com/get-docker/
 
-## Install aditional packages for timelink-mhk interaction
+See the notebook [0.tutorial](tests/timelink-home/projects/test-project/notebooks/0.tutorial.ipynb) for a tutorial on how to use `timelink` in a notebook.
 
-In addition to the base instalation of Python, some specific packages are needed
-to interact with ``timelink-mhk``. The packages handle sql queries, reading MHK
-configuration files, and various auxiliary functions.
+If you have problems create an issue or start a discussion in https://github.com/time-link/timelink-py
 
-To install the required packages open the terminal in VSCode: Command+j or menu `Terminal` -> `New terminal`
+## Install Docker
 
-Type 
-    ``pip install -r notebooks/requirements.txt``
+Go to https://www.docker.com/products/docker-desktop/
 
+And install the version for your system.
 
-# Optional packages
-
-Data analysis with Pandas
-
-    ``pip install pandas``
-
-
-## References
-
-* https://pypi.org/project/ipython-sql/
-* https://pypi.org/project/python-dotenv/
-* https://pypi.org/project/mysql-connector-python/
-* https://pandas.pydata.org
-* https://ipywidgets.readthedocs.io/en/latest/index.html
