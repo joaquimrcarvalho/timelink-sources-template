@@ -2,6 +2,7 @@
 .vscode/settings.json
 notebooks/__pycache__
 .venv
-sources/.kleio/logs/kleio_service.log
-database/sqlite/timelink.sqlite
-
+sources/.kleio/
+database/
+.kleio.json
+.kleio/logs/kleio_service.log
